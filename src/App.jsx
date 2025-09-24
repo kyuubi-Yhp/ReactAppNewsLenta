@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { GetPostsApi } from './api/GetPostsApi'
+import { GetPostsApi, DeletPost } from './api/GetPostsApi'
 import { GetNormalizePosts } from './utils/GetNormalizePosts'
 import AddPost from './components/AddPost/AddPost'
 import LentaPost from './components/LentaPost/LentaPost'
@@ -29,21 +29,27 @@ function App() {
       });
   }, [])
 
+  function deletePostBtn(id) {
+    setPostId(postId.filter(postId => postId !== id))
+    DeletPost(id)
+  }
+
   return (
     <div>
       <AddPost
 
       />
-    
+
       <LentaPost
+        deletePostBtn={deletePostBtn}
         postId={postId}
         postById={postById}
       />
-        <LoadingFetch 
-      isLoading={isLoading}
+      <LoadingFetch
+        isLoading={isLoading}
       />
-      <ErrorFetch 
-      isError={isError}
+      <ErrorFetch
+        isError={isError}
       />
     </div>
   )

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://jsonplaceholder.typicode.com/users/1'
+const BASE_URL = 'https://jsonplaceholder.typicode.com'
 
 export function GetPostsApi() {
   return fetch(`${BASE_URL}/posts`)
@@ -8,4 +8,10 @@ export function GetPostsApi() {
     }
     return response.json()
   })
+}
+
+export function DeletPost(id) {
+  fetch(`${BASE_URL}/posts/${id}`, {
+    method: 'DELETE',
+  });
 }
