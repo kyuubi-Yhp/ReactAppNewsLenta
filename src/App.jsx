@@ -60,23 +60,25 @@ function App() {
 
   return (
     <div>
-      <AddPost
-        addPost={addPost}
-        handelValueImput={handelValueImput}
-        addPostBtn={addPostBtn}
-      />
+      <div className='container__app'>
+        <AddPost
+          addPost={addPost}
+          handelValueImput={handelValueImput}
+          addPostBtn={addPostBtn}
+        />
 
-      <LentaPost
-        deletePostBtn={deletePostBtn}
-        postId={postId}
-        postById={postById}
-      />
-      <LoadingFetch
-        isLoading={isLoading}
-      />
-      <ErrorFetch
-        isError={isError}
-      />
+        <LentaPost
+          deletePostBtn={deletePostBtn}
+          postId={postId}
+          postById={postById}
+        />
+        <LoadingFetch
+          isLoading={isLoading}
+        />
+        <ErrorFetch
+          isError={isError}
+        />
+      </div>
     </div>
   )
 }
