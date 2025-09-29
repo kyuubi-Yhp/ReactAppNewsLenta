@@ -66,17 +66,16 @@ function App() {
           handelValueImput={handelValueImput}
           addPostBtn={addPostBtn}
         />
-
-        <LentaPost
-          deletePostBtn={deletePostBtn}
-          postId={postId}
-          postById={postById}
-        />
         <LoadingFetch
           isLoading={isLoading}
         />
         <ErrorFetch
           isError={isError}
+        />
+        <LentaPost
+          deletePostBtn={deletePostBtn}
+          postId={postId}
+          postById={postById}
         />
       </div>
     </div>

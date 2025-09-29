@@ -1,26 +1,31 @@
 import './LentaPost.css'
 
+
 function LentaPost({
   postId,
   postById,
   deletePostBtn
 }) {
   return (
-    <div>
-      <h1>лента</h1>
-
-      <div>
+    <div className='lenta__container'>
+      <h1 className='lenta__title'>лента</h1>
+      <div className='lenta__post'>
         {postId && postId.map(id => (
-          <div key={id}>
-            <h2>{postById[id].title}</h2>
-            <p>{postById[id].body}</p>
-            <div 
-            onClick={() => deletePostBtn(id)}
-            className="cross__btn"
-            >✘</div>
+          <div
+            className='lenta__box-item'
+            key={id}>
+            <h2 className='lenta__title-item'>{postById[id].title}</h2>
+            <p className='text'>{postById[id].body}</p>
+          <div
+          className="cross__btn-box">
+              <div
+                onClick={() => deletePostBtn(id)}
+                className="cross__btn"
+              >✘</div>
+          </div>
           </div>
         ))}
-        
+
       </div>
 
     </div>

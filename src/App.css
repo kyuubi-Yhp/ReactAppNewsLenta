@@ -2,3 +2,32 @@
   width: 714px;
   margin: 0 auto;
 }
+
+input,
+textarea,
+button {
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border: solid 0.125rem #121212;
+  box-shadow: 0.25rem 0.25rem #121212;
+  transition:
+    transform 50ms, box-shadow 50ms;
+}
+
+input:active,
+textarea:active,
+button:active {
+  transform: translate(0.125rem, 0.125rem);
+  box-shadow: 0.125rem 0.125rem #121212;
+}
+
+p,
+h2 {
+  width: 586px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: rgba(152, 98, 98, 0.469);
+}

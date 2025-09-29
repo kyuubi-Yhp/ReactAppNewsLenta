@@ -1,4 +1,44 @@
+.cross__btn-box {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
 .cross__btn {
+  width: 23px;
+  height: 23px;
   cursor: pointer;
   font-size: 25px;
+}
+
+.lenta__container {
+  min-height: 500px;
+  max-width: 714px;
+  padding: 20px 50px 50px;
+  border: solid 0.125rem #121212;
+  box-shadow: 0.25rem 0.25rem #121212;
+  background-color: rgba(152, 98, 98, 0.469);
+  border-radius: 20px;
+}
+
+.lenta__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.lenta__box-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: solid 0.125rem #121212;
+  box-shadow: 0.25rem 0.25rem #121212;
+  background-color: rgba(152, 98, 98, 0.469);
+}
+
+.lenta__title-item {
+  font-size: 20px;
 }
