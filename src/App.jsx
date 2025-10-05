@@ -47,7 +47,10 @@ function App() {
   function addPostBtn() {
     const newId = crypto.randomUUID()
     const newPost = { ...addPost, id: newId }
-
+    if (!addPost.title.trim() || !addPost.body.trim()) {
+      console.log('не все поля запонены')
+      return
+    }
     setPostById({ ...postById, [newId]: newPost })
     setPostId([newId, ...postId])
 
